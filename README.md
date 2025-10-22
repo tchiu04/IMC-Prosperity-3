@@ -18,6 +18,38 @@ I participated as a quant developer and strategist, where I:
 
 > This repository contains code, notes, and strategy insights developed during the competition.
 
+### 📚 About datamodel.py
+The competition provides a `datamodel.py` file that contains essential data structures and classes used for trading:
+- **TradingState**: Contains the current market state (timestamp, order depths, positions, trades, observations)
+- **OrderDepth**: Represents bid and ask orders in the order book
+- **Order**: Structure for creating buy/sell orders
+- **Trade**: Represents executed trades
+- **Listing**, **Observation**: Additional market data structures
+- **ProsperityEncoder**: JSON encoder for logging
+
+All trading algorithms must import from this file to interact with the market environment.
+
+### 🧪 Backtesting
+
+To test your trading algorithms locally:
+
+**Installation:**
+```bash
+# Install the latest version of the backtester
+pip install -U prosperity3bt
+```
+
+**Running the backtester:**
+```bash
+# Run the backtester on an algorithm using all data from round 0
+prosperity3bt <path to algorithm file> 0
+
+# Example:
+prosperity3bt terence_rainforest.py 0
+```
+
+The backtester simulates the competition environment and provides performance metrics, allowing you to iterate on strategies before submission.
+
 ---
 
 🚀 Feel free to explore the code and reach out if you'd like to discuss quantitative trading, algorithmic strategy design, or the IMC competition experience.
